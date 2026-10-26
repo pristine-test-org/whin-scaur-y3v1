@@ -9,4 +9,4 @@ live list from the shared Supabase test project.
 
 | Production | Preview gate |
 |---|---|
-| _not deployed_ | no (the site's own sign-in) |
+| https://whin-scaur-y3v1.vercel.app | no (the site's own sign-in) |

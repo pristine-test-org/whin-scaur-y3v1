@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How the shared list works · Whin Scaur</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; --accent: #2f7d4f; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      main { max-width: 44rem; margin: 0 auto; padding: 2rem 0; }
+      .mark { font-weight: 700; color: var(--accent); }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin: 0 1rem 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #2f7d4f, #3b6fd1);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      h2 { margin: 2rem 1rem 0.5rem; }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no background. */
+      .lede { margin: 0; padding: 0; font-size: 1.1rem; line-height: 1.5; }
+      .steps, .facts { margin: 0 1rem; line-height: 1.7; }
+      .cards { display: flex; gap: 1rem; margin: 1rem; flex-wrap: wrap; }
+      .card {
+        flex: 1 1 10rem; background: #fff; border: 1px solid #e5e5e0; border-radius: 0.5rem; padding: 1rem;
+        /* Intentional, for Impeccable's test drive: transition on a layout property. */
+        width: 10rem; transition: width 0.3s;
+      }
+      .card:hover { width: 12rem; }
+      .card strong { display: block; font-size: 1.75rem; color: #2f7d4f; }
+      /* Intentional, for Impeccable's test drive: a colour that is not in the site's palette. */
+      .card.alt { border-color: #d6336c; }
+      /* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 contrast. */
+      .note { margin: 1rem; color: #c4c4c4; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .more { margin: 1rem; font-size: 10px; }
+      .more a { color: var(--accent); }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header><span class="mark">Whin Scaur</span></header>
+    <main>
+      <h1>How the shared list works</h1>
+      <p class="lede">Everything you add to Whin Scaur lands on one list that every signed-in teammate sees at the same time, so nobody has to ask what is left to do.</p>
+
+      <h2>This week on the list</h2>
+      <div class="cards">
+        <div class="card"><strong>12</strong>items added</div>
+        <div class="card alt"><strong>9</strong>items finished</div>
+        <div class="card"><strong>3</strong>items still open</div>
+      </div>
+
+      <h2>Getting started</h2>
+      <ol class="steps">
+        <li>Sign in with the account your team gave you.</li>
+        <li>Open the landing page to see the five newest items.</li>
+        <li>Finished items show a tick in front of the title.</li>
+      </ol>
+
+      <h2>Good to know</h2>
+      <ul class="facts">
+        <li>The list refreshes every time you open the landing page.</li>
+        <li>Admins and managers sign in at their own pages.</li>
+        <li>Customers sign in at the main sign-in page.</li>
+      </ul>
+      <p class="note">Items older than the newest five stay on the list but are not shown on the landing page.</p>
+      <p class="more"><a href="/login">Go to the sign-in page</a></p>
+    </main>
+    <footer>Whin Scaur</footer>
+  </body>
+</html>
